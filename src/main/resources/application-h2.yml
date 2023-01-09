@@ -1,0 +1,27 @@
+spring:
+  # 数据源配置
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:./h2
+    username: sa
+    password:
+  # jpa配置
+  jpa:
+    database: h2
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+  # h2配置
+  h2:
+    console:
+      # 启用控制台
+      enabled: true
+      path: /h2
+      settings:
+        # 允许外人连接
+        web-allow-others: true
+        # 配置h2首选项时的账号密码
+        web-admin-password: test
+

@@ -1,0 +1,14 @@
+spring:
+  # 数据源配置
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:./sqlite
+  # jpa配置
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    database-platform: org.sqlite.hibernate.dialect.SQLiteDialect
+
