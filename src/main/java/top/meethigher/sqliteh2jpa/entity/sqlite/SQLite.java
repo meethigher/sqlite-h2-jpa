@@ -1,4 +1,4 @@
-package top.meethigher.sqliteh2jpa;
+package top.meethigher.sqliteh2jpa.entity.sqlite;
 
 import javax.persistence.*;
 
@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Table(uniqueConstraints = {@UniqueConstraint(columnNames = {
         "userName", "userPassword"
 })})
-public class User {
+public class SQLite {
 
     /**
      * 编号
